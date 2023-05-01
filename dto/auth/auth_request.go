@@ -8,7 +8,7 @@ type AuthRequest struct {
 	Gender   string `json:"gender" form:"gender" validate:"required"`
 	Phone    string `json:"phone" form:"phone" validate:"required"`
 	Address  string `json:"address" form:"address" validate:"required"`
-	Role     string `json:"role" form:"role"`
+	Role     string `json:"role" gorm:"default:member"`
 }
 type LoginRequest struct {
 	Email    string `json:"email" form:"email"`
